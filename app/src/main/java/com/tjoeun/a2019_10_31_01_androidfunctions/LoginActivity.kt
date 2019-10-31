@@ -1,5 +1,6 @@
 package com.tjoeun.a2019_10_31_01_androidfunctions
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -25,7 +26,17 @@ class LoginActivity : AppCompatActivity() {
 
                 Toast.makeText(this,"${userNumber} 번 ${userName} 회원님 환영합니다.", Toast.LENGTH_SHORT).show()
 
+                var myIntent= Intent(this,MainActivity::class.java)
+                startActivity(myIntent)
 
+
+
+        }
+
+        signBtn.setOnClickListener {
+
+            var myIntent= Intent(this,SignUp::class.java)
+            startActivity(myIntent)
         }
 
 
@@ -33,3 +44,10 @@ class LoginActivity : AppCompatActivity() {
 
     }
 }
+
+
+// 연습문제
+// 회원가입 (signup) 화면을 만들고  배경을 초록색 (#00FF00) 으로만 설정하자
+// 회원가입 버튼을 누르면 해당 엑티비티로 이동하도록
+
+

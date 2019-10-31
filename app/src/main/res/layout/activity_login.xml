@@ -54,6 +54,7 @@
             android:layout_weight="1"
             android:text="로그인"/>
         <Button
+            android:id="@+id/signBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
