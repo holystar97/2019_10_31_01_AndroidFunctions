@@ -14,37 +14,35 @@ class LoginActivity : AppCompatActivity() {
     // ex 10번 김민경 회원님 환영합니다. 라는 toast를 띄우자
 
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
         loginBtn.setOnClickListener {
-                var userName=nameEdt.text.toString()
-                var userNumber= memberNumEdt.text.toString()
+            var userName = nameEdt.text.toString()
+            var userNumber = memberNumEdt.text.toString()
 
-                Toast.makeText(this,"${userNumber} 번 ${userName} 회원님 환영합니다.", Toast.LENGTH_SHORT).show()
+            var userId = idEdt.text.toString()
 
-                var myIntent= Intent(this,MainActivity::class.java)
-                myIntent.putExtra("name",userName)
-                myIntent.putExtra("memberNumber",userNumber)
-            
+
+            Toast.makeText(this, "${userNumber} 번 ${userName} 회원님 환영합니다.", Toast.LENGTH_SHORT)
+                .show()
+
+            var myIntent = Intent(this, MainActivity::class.java)
+            myIntent.putExtra("name", userName)
+            myIntent.putExtra("memberNumber", userNumber)
+            myIntent.putExtra("memberId", userId)
+
             startActivity(myIntent)
-
-
-
 
 
         }
 
         signBtn.setOnClickListener {
 
-            var myIntent= Intent(this,SignUp::class.java)
+            var myIntent = Intent(this, SignUp::class.java)
             startActivity(myIntent)
         }
-
-
 
 
     }

@@ -21,6 +21,7 @@
 
 
     <TextView
+        android:id="@+id/memberNumTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -28,13 +29,16 @@
         android:text="30번 회원"/>
 
     <TextView
+        android:id="@+id/memberNameTxt"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="#000000"
-        android:text="김민경"/>
+        android:text="김민경" />
+
+
 
 
 
